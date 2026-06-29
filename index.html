@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>දොළුව ප්‍රාදේශීය ලේකම් කොට්ඨාසය — 2024 සංවර්ධන ප්‍රගතිය</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Noto+Serif+Sinhala:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1E4;
+    --paper-deep:#E3E7D5;
+    --ink:#19281F;
+    --tea:#2F5233;
+    --tea-deep:#15291B;
+    --tea-soft:#5C7C5E;
+    --brass:#B8862E;
+    --brass-light:#D9AE5C;
+    --clay:#8C4A38;
+    --mist:#5E6E64;
+    --line:#CFD6BE;
+    --card-bg:#F7F8EE;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans Sinhala', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,p,div{overflow-wrap:break-word; word-break:normal;}
+  h1,h2,h3{font-family:'Noto Serif Sinhala', serif; margin:0; color:var(--ink);}
+  .num{font-family:'Fraunces', serif; font-variant-numeric:tabular-nums;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:980px; margin:0 auto; padding:22px 24px 10px;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .mark{width:34px; height:34px; flex:none;}
+  .brand-text{font-size:13.5px; color:var(--mist); line-height:1.35;}
+  .brand-text strong{color:var(--ink); display:block; font-size:14.5px; font-weight:600;}
+  .topdate{font-size:12.5px; color:var(--mist); white-space:nowrap;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(165deg, var(--tea) 0%, var(--tea-deep) 78%);
+    color:#F4F2E8;
+    padding:54px 24px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{max-width:980px; margin:0 auto; position:relative; z-index:2;}
+  .eyebrow{
+    font-size:13px; letter-spacing:.06em; color:var(--brass-light);
+    font-weight:600; margin-bottom:14px; display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--brass-light); display:inline-block;}
+  .hero h1{
+    font-size:clamp(28px,4.6vw,44px); font-weight:600; line-height:1.28; color:#FBFAF3;
+    max-width:680px;
+  }
+  .hero p.sub{
+    font-size:16px; color:#D8DEC9; max-width:540px; margin:16px 0 0; line-height:1.65;
+  }
+  .stat-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+    margin:34px 0 0;
+  }
+  .stat{
+    background:rgba(244,242,232,0.07);
+    border:1px solid rgba(244,242,232,0.16);
+    border-radius:10px;
+    padding:18px 16px 16px;
+    backdrop-filter:blur(2px);
+  }
+  .stat .big{
+    font-size:clamp(26px,3.4vw,38px); font-weight:600; color:var(--brass-light);
+    line-height:1;
+  }
+  .stat .label{font-size:12.5px; color:#CBD2BB; margin-top:8px; line-height:1.5;}
+  .stat.lead .big{color:#FBFAF3;}
+
+  .terrace-divider{display:block; width:100%; height:64px; margin-top:38px;}
+
+  /* ---------- Breakdown ---------- */
+  .section{max-width:980px; margin:0 auto; padding:48px 24px 10px;}
+  .section h2{font-size:24px; font-weight:600;}
+  .section .lede{color:var(--mist); font-size:14.5px; margin:10px 0 30px; max-width:620px; line-height:1.7;}
+
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .card{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 18px 16px;
+  }
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+  .card h3{font-size:15.5px; font-weight:600; line-height:1.45; flex:1;}
+  .chip{
+    flex:none; font-size:11.5px; font-weight:600; color:var(--tea);
+    background:#E3E9D6; border-radius:20px; padding:3px 10px; white-space:nowrap;
+  }
+  .subtag{
+    display:inline-block; margin-top:6px; font-size:11px; color:var(--mist);
+    background:var(--paper-deep); border-radius:4px; padding:2px 7px;
+  }
+  .money-row{display:flex; gap:18px; margin:14px 0 4px; font-size:12.5px; color:var(--mist);}
+  .money-row .amt{display:block; font-size:14.5px; color:var(--ink); font-weight:600; margin-top:2px;}
+  .terrace-wrap{display:flex; align-items:flex-end; gap:12px; margin-top:14px;}
+  .terrace-wrap svg{flex:none;}
+  .pct-label{font-family:'Fraunces',serif; font-weight:600; font-size:20px; color:var(--tea); line-height:1;}
+  .pct-label span{display:block; font-family:'Noto Sans Sinhala',sans-serif; font-size:10.5px; font-weight:500; color:var(--mist); margin-top:3px;}
+
+  /* sub-row inside card for i/ii items */
+  .sub-items{margin-top:12px; display:flex; flex-direction:column; gap:10px;}
+  .sub-item{background:var(--paper-deep); border-radius:8px; padding:10px 12px;}
+  .sub-item .sub-label{font-size:12px; color:var(--mist); margin-bottom:6px;}
+  .sub-item .sub-money{display:flex; gap:14px; font-size:11.5px; color:var(--mist);}
+  .sub-item .sub-money .amt{font-size:13px; color:var(--ink); font-weight:600; margin-top:2px;}
+  .sub-item .terrace-wrap{margin-top:8px;}
+
+  .note{
+    grid-column:1 / -1;
+    font-size:12.5px; color:var(--mist); border-top:1px dashed var(--line);
+    padding-top:14px; margin-top:4px; line-height:1.7;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    max-width:980px; margin:40px auto 0; padding:26px 24px 40px;
+    border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px;
+    font-size:12.5px; color:var(--mist); line-height:1.8;
+  }
+  footer strong{color:var(--ink);}
+
+  @media (max-width:680px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+    .grid{grid-template-columns:1fr;}
+    .hero{padding-top:42px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="#2F5233"/>
+        <path d="M5 28 L5 24 L13 24 L13 19 L21 19 L21 14 L29 14 L29 9 L35 9" stroke="#D9AE5C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 28 L35 28" stroke="#F4F2E8" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-text"><strong>දොළුව ප්‍රාදේශීය ලේකම් කොට්ඨාසය</strong>මහනුවර දිස්ත්‍රික්කය · මධ්‍යම පළාත</div>
+    </div>
+    <div class="topdate">දත්ත දිනය: 2024.12.31</div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">ප්‍රජා ප්‍රගති වාර්තාව</div>
+      <h1>2024 වසරේ සංවර්ධන වැඩසටහන්වල ප්‍රගතිය</h1>
+      <p class="sub">දොළුව ප්‍රාදේශීය ලේකම් කොට්ඨාසය තුළ 2024 වසරේ ක්‍රියාත්මක කළ සියලුම සංවර්ධන වැඩසටහන්වල භෞතික හා මූල්‍ය ප්‍රගතිය පිළිබඳ සාරාංශයක්.</p>
+
+      <div class="stat-row" id="statRow"></div>
+    </div>
+
+    <svg class="terrace-divider" viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,64 L0,40 L100,40 L100,28 L200,28 L200,44 L300,44 L300,18 L400,18 L400,34 L500,34 L500,10 L600,10 L600,30 L700,30 L700,6 L800,6 L800,26 L900,26 L900,2 L1000,2 L1000,22 L1100,22 L1100,0 L1200,0 L1200,64 Z" fill="#EEF1E4"/>
+      <path d="M0,40 L100,40 L100,28 L200,28 L200,44 L300,44 L300,18 L400,18 L400,34 L500,34 L500,10 L600,10 L600,30 L700,30 L700,6 L800,6 L800,26 L900,26 L900,2 L1000,2 L1000,22 L1100,22 L1100,0" fill="none" stroke="rgba(217,174,92,0.45)" stroke-width="2"/>
+    </svg>
+  </section>
+
+  <section class="section">
+    <h2>වැඩසටහන් අනුව ප්‍රගතිය</h2>
+    <p class="lede">එක් එක් වැඩසටහන සඳහා වෙන් කළ ප්‍රතිපාදන, ඒ සඳහා 2024 වසරේ වැය කළ මුදල සහ එම මූල්‍ය ප්‍රගතිය පහත දැක්වේ. රන්වන් පෙළ ඉහළ යනතුරම, එම වැඩසටහනේ ප්‍රතිපාදන භාගය වැය වී අවසන් බව පෙන්වයි.</p>
+    <div class="grid" id="cardGrid"></div>
+  </section>
+
+  <footer>
+    <div>මූලාශ්‍රය: <strong>දොළුව ප්‍රාදේශීය ලේකම් කාර්යාලය</strong> — අභ්‍යන්තර ප්‍රගති වාර්තාව (2024.12.31 දක්වා).<br>
+    සියලුම ව්‍යාපෘතිවල ඉදිකිරීම් / භාණ්ඩ ලබාදීම් කටයුතු භෞතිකව අවසන් කර ඇත; මූල්‍ය ප්‍රගතිය ගෙවීම් සහ ගිණුම්කරණ අවසන් කිරීම පිළිබිඹු කරයි.</div>
+    <div>සකස් කළේ — දොළුව ප්‍රාදේශීය ලේකම් කාර්යාලය</div>
+  </footer>
+
+<script>
+// ---- Data from Summery 01 sheet (2024.12.31) ----
+// Grouped programs: main + optional sub-items (i/ii)
+const programs = [
+  {
+    name: "විමධ්‍යගත අයවැය වැඩසටහන - 2024",
+    count: 73,
+    allocated: 33500000,
+    spent: 32106937.26,
+    pct: 95.84,
+    subs: [
+      {label:"i. ඉදිකිරීම් / යටිතල පහසුකම්", count:58, allocated:32010000, spent:30664883.38, pct:95.80},
+      {label:"ii. මිල දී ගැනීම්", count:15, allocated:1490000, spent:1442053.88, pct:96.78},
+    ]
+  },
+  {
+    name: "කඳුකර දශකය සංවර්ධන වැඩසටහන - 2024",
+    count: 185,
+    allocated: 100000000,
+    spent: 96016833.61,
+    pct: 96.02,
+    subs: [
+      {label:"i. ඉදිකිරීම් / යටිතල පහසුකම්", count:178, allocated:98800000, spent:94905302.18, pct:96.06},
+      {label:"ii. මිල දී ගැනීම්", count:7, allocated:1200000, spent:1111531.43, pct:92.63},
+    ]
+  },
+  {
+    name: "ග්‍රාමීය මාර්ග සංවර්ධන වැඩසටහන - 2024",
+    count: 12,
+    allocated: 7500000,
+    spent: 7269615.32,
+    pct: 96.93,
+  },
+  {
+    name: "ගරු පා.ම. වේළුකුමාර් මැතිතුමා",
+    count: 22,
+    allocated: 3400000,
+    spent: 3288377.14,
+    pct: 96.72,
+    subs: [
+      {label:"i. ඉදිකිරීම් / යටිතල පහසුකම්", count:5, allocated:1400000, spent:1352000, pct:96.57},
+      {label:"ii. මිල දී ගැනීම්", count:17, allocated:2000000, spent:1936377.14, pct:96.82},
+    ]
+  },
+  {
+    name: "ගරු පා.ම. මහින්දානන්ද අළුත්ගමගේ මැතිතුමා",
+    count: 14,
+    allocated: 5500000,
+    spent: 5281957.82,
+    pct: 96.04,
+    subs: [
+      {label:"(වතු) i. ඉදිකිරීම්", count:4, allocated:1200000, spent:1164000, pct:97.00},
+      {label:"(වතු) ii. මිල දී ගැනීම්", count:6, allocated:2000000, spent:1886957.82, pct:94.35},
+      {label:"(ආගමික)", count:1, allocated:300000, spent:291000, pct:97.00},
+      {label:"(බලපත්‍ර)", count:3, allocated:2000000, spent:1940000, pct:97.00},
+    ]
+  },
+  {
+    name: "ගරු පා.ම. උදයන කිඳිගොඩ මැතිතුමා (බලපත්‍ර)",
+    count: 2,
+    allocated: 300000,
+    spent: 291759.10,
+    pct: 97.25,
+    subs: [
+      {label:"i. ඉදිකිරීම්", count:1, allocated:250000, spent:242500, pct:97.00},
+      {label:"ii. මිල දී ගැනීම්", count:1, allocated:50000, spent:49259.10, pct:98.52},
+    ]
+  },
+  {
+    name: "පළාත් සභා ව්‍යාපෘති (අත්‍යාවශ්‍ය සංවර්ධන)",
+    count: 2,
+    allocated: 1000000,
+    spent: 996678.43,
+    pct: 99.67,
+  },
+  {
+    name: "සමාජ සුභසාධන හා පරිවාස දෙපාර්තමේන්තුව",
+    count: 2,
+    allocated: 5215126.08,
+    spent: 4742162.36,
+    pct: 90.93,
+  },
+  {
+    name: "දිස්ත්‍රික් ලේකම් කාර්යාල ප්‍රතිපාදන - 2024",
+    count: 2,
+    allocated: 2080183.25,
+    spent: 2080183.25,
+    pct: 100.00,
+  },
+  {
+    name: "ජාතික වැඩිහිටි මහ ලේකම් කාර්යාලය - 2024",
+    count: 2,
+    allocated: 2700000,
+    spent: 2633000,
+    pct: 97.52,
+  },
+  {
+    name: "මධ්‍යම පළාත් කෘෂිකර්ම අමාත්‍යාංශය",
+    count: 1,
+    allocated: 500000,
+    spent: 490000,
+    pct: 98.00,
+  },
+  {
+    name: "අධ්‍යාපන අමාත්‍යාංශය - 2024",
+    count: 1,
+    allocated: 500000,
+    spent: 491075,
+    pct: 98.22,
+  },
+  {
+    name: "මධ්‍යම පළාත් අධ්‍යාපන දෙපාර්තමේන්තුව",
+    count: 1,
+    allocated: 500000,
+    spent: 487500,
+    pct: 97.50,
+  },
+  {
+    name: "අපනයන කෘෂිකර්ම දෙපාර්තමේන්තුව",
+    count: 1,
+    allocated: 500000,
+    spent: 489425.96,
+    pct: 97.89,
+  },
+  {
+    name: "ග්‍රාම සංවර්ධන දෙපාර්තමේන්තුව - 2024",
+    count: 1,
+    allocated: 450000,
+    spent: 436500,
+    pct: 97.00,
+  },
+  {
+    name: "මධ්‍යම පළාත් පේෂකර්ම දෙපාර්තමේන්තුව",
+    count: 1,
+    allocated: 500000,
+    spent: 490000,
+    pct: 98.00,
+  },
+  {
+    name: "හින්දු ආගමික හා සංස්කෘතික කටයුතු දෙපාර්තමේන්තුව",
+    count: 3,
+    allocated: 400000,
+    spent: 371750.50,
+    pct: 92.94,
+  },
+  {
+    name: "මෝටර් රථ ප්‍රවාහණ දෙපාර්තමේන්තුව - 2024",
+    count: 1,
+    allocated: 523269.21,
+    spent: 523269.21,
+    pct: 100.00,
+  },
+  {
+    name: "අධිකරණ අමාත්‍යාංශය - 2024",
+    count: 1,
+    allocated: 97434,
+    spent: 97434,
+    pct: 100.00,
+  },
+];
+
+const totalAllocated = 165166012.54;
+const totalSpent     = 158584458.96;
+const totalCount     = 327;
+const overallPct     = (totalSpent / totalAllocated * 100);
+
+const fmtRs = n => 'රු. ' + Math.round(n).toLocaleString('en-US');
+const fmtM  = n => (n / 1e6).toFixed(2) + ' මි.';
+
+// ---- Hero stats ----
+const stats = [
+  {big: totalCount, label: "සංවර්ධන ව්‍යාපෘති — සියල්ලම භෞතිකව සම්පූර්ණයි", lead: true},
+  {big: "100%",      label: "භෞතික ප්‍රගතිය (ඉදිකිරීම් / භාණ්ඩ ලබාදීම්)"},
+  {big: overallPct.toFixed(1) + "%", label: "සමස්ත මූල්‍ය ප්‍රගතිය (ගෙවීම් අවසන් කිරීම)"},
+  {big: fmtM(totalSpent), label: "වැය කළ මුදල — රු. " + fmtM(totalAllocated) + " න්"},
+];
+document.getElementById('statRow').innerHTML = stats.map(s =>
+  `<div class="stat ${s.lead ? 'lead' : ''}"><div class="big num">${s.big}</div><div class="label">${s.label}</div></div>`
+).join('');
+
+// ---- Terrace SVG ----
+function terraceSVG(pct, uid) {
+  const path = "M0,50 L0,40 L40,40 L40,30 L80,30 L80,20 L120,20 L120,10 L160,10 L160,0 L200,0 L200,50 Z";
+  const w = Math.max(0, Math.min(200, pct * 2));
+  return `
+  <svg width="120" height="32" viewBox="0 0 200 50">
+    <defs>
+      <linearGradient id="grad${uid}" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2F5233"/>
+        <stop offset="100%" stop-color="#D9AE5C"/>
+      </linearGradient>
+      <clipPath id="clip${uid}"><rect x="0" y="0" width="${w}" height="50"/></clipPath>
+    </defs>
+    <path d="${path}" fill="#E3E7D5" stroke="#CFD6BE" stroke-width="1.5"/>
+    <path d="${path}" fill="url(#grad${uid})" clip-path="url(#clip${uid})"/>
+  </svg>`;
+}
+
+// ---- Render cards ----
+const grid = document.getElementById('cardGrid');
+grid.innerHTML = programs.map((p, i) => {
+  const hasSubs = p.subs && p.subs.length > 0;
+  const subsHtml = hasSubs ? `
+    <div class="sub-items">
+      ${p.subs.map((s, j) => `
+        <div class="sub-item">
+          <div class="sub-label">${s.label} <span class="chip" style="font-size:10px;padding:1px 7px;">ව්‍යාපෘති ${s.count}</span></div>
+          <div class="sub-money">
+            <div>වෙන් කළ<span class="amt">${fmtRs(s.allocated)}</span></div>
+            <div>වැය කළ<span class="amt">${fmtRs(s.spent)}</span></div>
+          </div>
+          <div class="terrace-wrap">
+            ${terraceSVG(s.pct, i * 100 + j)}
+            <div class="pct-label">${s.pct.toFixed(1)}%<span>මූල්‍ය ප්‍රගතිය</span></div>
+          </div>
+        </div>`).join('')}
+    </div>` : '';
+
+  return `
+  <div class="card">
+    <div class="card-top">
+      <h3>${p.name}</h3>
+      <span class="chip">ව්‍යාපෘති ${p.count}</span>
+    </div>
+    <div class="money-row">
+      <div>වෙන් කළ මුදල<span class="amt">${fmtRs(p.allocated)}</span></div>
+      <div>වැය කළ මුදල<span class="amt">${fmtRs(p.spent)}</span></div>
+    </div>
+    <div class="terrace-wrap">
+      ${terraceSVG(p.pct, i)}
+      <div class="pct-label">${p.pct.toFixed(1)}%<span>මූල්‍ය ප්‍රගතිය</span></div>
+    </div>
+    ${subsHtml}
+  </div>`;
+}).join('') + `
+  <div class="note">සටහන: ඉහත ප්‍රතිශතය එම වැඩසටහන සඳහා වෙන් කළ මුදලින් 2024.12.31 දක්වා වැය කර ඇති ප්‍රමාණය පෙන්වයි. සියලුම ව්‍යාපෘතිවල ඉදිකිරීම් / භාණ්ඩ ලබාදීම් කටයුතු භෞතිකව 100%ක් අවසන් කර ඇත. මුළු වෙන් කළ ප්‍රතිපාදන: රු. ${fmtM(totalAllocated)} | මුළු වියදම: රු. ${fmtM(totalSpent)}</div>
+`;
+</script>
+
+</body>
+</html>
